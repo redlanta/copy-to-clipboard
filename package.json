@@ -1,5 +1,5 @@
 {
-  "name": "copy-to-clipboard",
+  "name": "copy-to-clipboard-breeze",
   "version": "3.2.1",
   "description": "Copy stuff into clipboard using JS with fallbacks",
   "main": "index.js",
