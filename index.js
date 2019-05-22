@@ -54,6 +54,9 @@ function copy(text, options) {
     document.body.appendChild(mark);
 
     range.selectNodeContents(mark);
+
+    selection.removeAllRanges();
+    
     selection.addRange(range);
 
     var successful = document.execCommand("copy");
@@ -74,14 +77,14 @@ function copy(text, options) {
       window.prompt(message, text);
     }
   } finally {
-    if (selection) {
-      if (typeof selection.removeRange == "function") {
-        selection.removeRange(range);
-      } else {
-        selection.removeAllRanges();
-      }
-    }
-
+    // if (selection) {
+    //   if (typeof selection.removeRange == "function") {
+    //     selection.removeRange(range);
+    //   } else {
+    //     selection.removeAllRanges();
+    //   }
+    // }
+    
     if (mark) {
       document.body.removeChild(mark);
     }
